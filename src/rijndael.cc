@@ -65,7 +65,7 @@ NAN_METHOD(Rijndael) {
     NanReturnUndefined();
   }
 
-  rijndael_module = mcrypt_module_open((char*) "rijndael-256", NULL, mode, NULL);
+  rijndael_module = mcrypt_module_open((char*) "rijndael-128", NULL, mode, NULL);
   if (rijndael_module == MCRYPT_FAILED) {
     NanThrowError("rijndael mcrypt module failed to load");
     NanReturnUndefined();
